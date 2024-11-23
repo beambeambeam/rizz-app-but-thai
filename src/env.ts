@@ -4,10 +4,10 @@ import { z } from "zod";
 export const env = createEnv({
   server: {
     NODE_ENV: z.string(),
-    OPEN_AI_API_KEY: z.string().optional(),
+    OPENAI_API_KEY: z.string().optional(),
   },
   runtimeEnv: {
-    OPEN_AI_API_KEY: process.env.OPEN_AI_API_KEY,
+    OPENAI_API_KEY: process.env.OPENAI_API_KEY,
     NODE_ENV: process.env.NODE_ENV,
   },
 });
