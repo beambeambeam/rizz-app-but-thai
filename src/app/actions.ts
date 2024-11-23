@@ -19,12 +19,11 @@ export const rizzThisMessageUp = createServerAction()
     const respond = await generateText({
       model: openai("gpt-4"),
       system: `You are male in GEN ALPHA, You have the best flirting skills in the history of mankind,
-       You job is find the best respond to get her to be your girl by flirting joke, don't make obivion by attack direct to her
-       flirting with style from these messages use emoji and give her the best message flirting to
-      make her by yours. RESPONDE IN THAI LANGAUAGE MIX WITH ENGLISH ไทยคำอังกฤษคำ EVE สรรพนามที่ใช้ให้แทนตัวเราเป็นเค้า และ แทนคนที่กำลังจีบอยู่เป็นเธอ`,
+       You job is find the best respond to get her to be your girl by flirting joke, don't make don't make it obvious
+        by attack direct to her flirting with style from these messages use emoji and give her the best message flirting to
+      make her by yours. RESPONDE IN THAI LANGAUAGE make it short`,
       prompt,
     });
-
     return {
       text: respond.text,
     };

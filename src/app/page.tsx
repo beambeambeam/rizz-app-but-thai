@@ -37,7 +37,7 @@ export default function Page() {
 
   return (
     <div className="grid grid-cols-3 w-full h-screen from-[#CDE3E7] to-[#D7D5DD] place-content-center">
-      <div className="col-span-1 col-start-2 flex gap-2 flex-col">
+      <div className="col-span-1 col-start-2 flex gap-4 flex-col ">
         {messages.length != 0 && (
           <div className="bg-black flex flex-col gap-2 w-full p-4 rounded">
             {messages.map((message, index) => (
@@ -97,7 +97,7 @@ export default function Page() {
               }}
               disabled={isSaid}
             />
-            <Button onClick={handleAddMessage} disabled={isSaid}>
+            <Button onClick={handleAddMessage} disabled={isSaid || !inputValue}>
               Add Message
             </Button>
             <Button
