@@ -24,6 +24,7 @@ export const rizzThisMessageUp = openAiRequestAction
        by attack direct to her flirting with style from these messages use a few emoji and give her the best message flirting to
        make her by yours. RESPONDE IN THAI LANGAUAGE make it short`,
       prompt,
+      temperature: Math.random(),
     });
     return {
       text: respond.text,
