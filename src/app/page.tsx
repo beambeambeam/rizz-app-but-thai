@@ -42,10 +42,10 @@ export default function Page() {
           <div className="bg-black flex flex-col gap-2 w-full p-4 rounded">
             {messages.map((message, index) => (
               <div
-                className="w-full flex justify-end"
+                className="w-full flex justify-start"
                 key={`${message}-${index}`}
               >
-                <p className="bg-[#1084FD] text-end w-fit p-2 rounded text-white">
+                <p className="bg-[#26262A] text-end w-fit p-2 rounded text-white">
                   {message}
                 </p>
               </div>
