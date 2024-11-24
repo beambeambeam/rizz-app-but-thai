@@ -1,7 +1,6 @@
 "use server";
 
 import { z } from "zod";
-import { createServerAction } from "zsa";
 import { generateText } from "ai";
 import { openai } from "@ai-sdk/openai";
 import { openAiRequestAction } from "~/lib/safe-action";
