@@ -4,8 +4,10 @@ import { z } from "zod";
 import { createServerAction } from "zsa";
 import { generateText } from "ai";
 import { openai } from "@ai-sdk/openai";
+import { openAiRequestAction } from "~/lib/safe-action";
 
-export const rizzThisMessageUp = createServerAction()
+export const rizzThisMessageUp = openAiRequestAction
+  .createServerAction()
   .input(
     z.object({
       messages: z.string().array(),
